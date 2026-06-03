@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Olivia Isabel &amp; Carlos Manuel · Boda · 17 Octubre 2026</title>
+<meta name="description" content="Invitación de boda de Olivia Isabel y Carlos Manuel · 17 de octubre de 2026 · García, Nuevo León">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://boda-olivia-y-carlos.vercel.app/">
+<meta property="og:title"       content="Olivia Isabel &amp; Carlos Manuel · Boda · 17 Octubre 2026">
+<meta property="og:description" content="¡Nos casamos el 17 de octubre de 2026 en García, Nuevo León! ¡Estás invitado!">
+<meta property="og:image"       content="https://boda-olivia-y-carlos.vercel.app/sobre.png">
+<meta property="og:image:width"  content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="twitter:image"      content="https://boda-olivia-y-carlos.vercel.app/sobre.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Lato',sans-serif;font-weight:400;font-size:16px;
+  color:#3a1400;background:#efdfc7;line-height:1.6;overflow-x:hidden;
+}
+:root{
+  --bg:#efdfc7;
+  --accent:#004d4d;
+  --dark:#560d00;
+  --text:#3a1400;
+  --surface:#cdb28b;
+  --card:#FFFFFF;
+  --gold:#aa5500;
+  --gold-light:#bb6531;
+}
+.wrap{max-width:430px;margin:0 auto;background:var(--bg);position:relative;overflow:clip;z-index:1;}
+
+/* ── STARS ── */
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+.star{
+  position:absolute;top:-20px;opacity:0;
+  clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+}
+
+/* ── HERO ── */
+.hero{position:relative;width:100%;min-height:100dvh;display:flex;flex-direction:column;background:#560d00;}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/1cb747ab-5a30-41f2-9d1a-8d0516ca10ad/1780330472644-5.jpeg') center top/cover no-repeat;
+}
+.hero-veil{
+  position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(86,13,0,0.15) 0%,
+    rgba(86,13,0,0.05) 30%,
+    rgba(86,13,0,0.45) 62%,
+    rgba(86,13,0,0.88) 82%,
+    #efdfc7 100%
+  );
+}
+.hero-bottom{position:relative;z-index:3;margin-top:auto;padding:0 28px 60px;text-align:center;}
+.hero-eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;letter-spacing:5px;text-transform:uppercase;
+  color:var(--gold-light);margin-bottom:8px;opacity:0;font-weight:500;
+}
+.hero-names{
+  font-family:'Great Vibes',cursive;font-size:58px;line-height:1.05;
+  color:#FFFFFF;margin-bottom:14px;
+  text-shadow:0 3px 32px rgba(86,13,0,.6);
+  transform:translateY(30px);opacity:0;
+}
+.hero-amp{
+  font-family:'Cormorant Garamond',serif;font-size:26px;font-style:italic;
+  color:var(--gold-light);display:block;letter-spacing:6px;margin:2px 0;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:12px;padding:8px 24px;
+  border:1px solid rgba(170,85,0,.5);border-radius:30px;
+  background:rgba(86,13,0,.4);backdrop-filter:blur(4px);
+  transform:translateY(16px);opacity:0;
+}
+.hero-badge span{
+  font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:4px;
+  text-transform:uppercase;color:var(--gold-light);font-weight:500;
+}
+
+/* ── ORNAMENTO ── */
+.orn{display:flex;justify-content:center;padding:6px 0;}
+.orn svg{width:170px;height:38px;}
+.orn svg polygon:first-of-type{
+  transform-box:fill-box;transform-origin:center;
+  animation:orn-spin 14s linear infinite, orn-glow 3.2s ease-in-out infinite;
+}
+.orn svg polygon:nth-of-type(2),
+.orn svg polygon:nth-of-type(3){
+  transform-box:fill-box;transform-origin:center;
+  animation:orn-spin-r 20s linear infinite;
+}
+.orn svg path:first-of-type{
+  stroke-dasharray:6 5;animation:orn-flow 3.5s linear infinite;
+}
+.orn svg path:nth-of-type(2){
+  stroke-dasharray:4 7;animation:orn-flow-r 4.5s linear infinite;
+}
+@keyframes orn-spin  {to{transform:rotate(360deg);}}
+@keyframes orn-spin-r{to{transform:rotate(-360deg);}}
+@keyframes orn-flow  {to{stroke-dashoffset:-22;}}
+@keyframes orn-flow-r{to{stroke-dashoffset:22;}}
+@keyframes orn-glow{
+  0%,100%{filter:drop-shadow(0 0 1px rgba(170,85,0,.35));}
+  50%    {filter:drop-shadow(0 0 9px rgba(187,101,49,.95)) drop-shadow(0 0 3px rgba(170,85,0,.6));}
+}
+@media(prefers-reduced-motion:reduce){
+  .orn svg polygon,.orn svg path{animation:none;}
+}
+
+/* ── FECHA ── */
+.fecha-sec{padding:28px 26px 10px;text-align:center;}
+.fecha-line{display:flex;align-items:center;justify-content:center;gap:16px;}
+.fecha-line .fl-bar{flex:1;max-width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold));opacity:.55;}
+.fecha-line .fl-bar.right{background:linear-gradient(to left,transparent,var(--gold));}
+.fecha-txt{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:16px;letter-spacing:6px;text-transform:uppercase;color:var(--dark);}
+
+/* ── SECCIONES ── */
+section{padding:60px 26px;}
+.eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:8px;font-weight:500;}
+.sec-title{font-family:'Great Vibes',cursive;font-size:52px;color:var(--dark);text-align:center;line-height:1.1;margin-bottom:30px;}
+
+/* ── COUNTDOWN ── */
+.cd-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+.cd-box{background:var(--card);border-radius:14px;padding:20px 4px;text-align:center;box-shadow:0 6px 36px rgba(86,13,0,.1);border-top:2px solid var(--gold);}
+.cd-num{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--dark);line-height:1;font-weight:600;font-variant-numeric:tabular-nums;}
+.cd-lbl{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:6px;font-weight:500;}
+
+/* ── UBICACIÓN ── */
+.loc-card{
+  background:var(--card);border-radius:18px;padding:28px 22px;
+  box-shadow:0 6px 36px rgba(86,13,0,.1);margin-bottom:18px;text-align:center;
+  border-left:3px solid var(--gold);
+}
+.loc-card .lt{font-family:'Great Vibes',cursive;font-size:40px;color:var(--dark);margin-bottom:4px;}
+.loc-card .ls{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500;}
+.loc-card p{font-size:16px;margin:3px 0;line-height:1.6;}
+.loc-card .lh{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--dark);letter-spacing:3px;margin-top:10px;font-weight:600;}
+.btn{
+  display:inline-block;margin-top:16px;padding:12px 30px;
+  background:var(--accent);color:#fff;border-radius:30px;
+  font-family:'Cormorant Garamond',serif;font-size:12px;
+  text-transform:uppercase;letter-spacing:3px;text-decoration:none;
+  transition:background .3s,transform .3s;border:none;cursor:pointer;font-weight:600;
+}
+.btn:hover{background:var(--dark);transform:translateY(-2px);}
+
+/* ── CALENDAR ── */
+.cal-c{text-align:center;}
+.cal-c p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--dark);margin-bottom:18px;font-weight:500;}
+
+/* ── ITINERARIO V3 — Centered Glowing Timeline ── */
+#siti{overflow:visible;padding-left:24px;padding-right:24px;}
+.itv3{
+  position:relative;
+  display:flex;flex-direction:column;align-items:center;
+  padding:10px 0 10px;
+}
+.itv3-track{
+  position:absolute;left:50%;transform:translateX(-50%);
+  top:0;bottom:0;width:1px;z-index:0;
+  background:linear-gradient(to bottom,
+    transparent 0%,
+    rgba(170,85,0,0.35) 10%,
+    rgba(0,77,77,0.25) 45%,
+    rgba(170,85,0,0.30) 80%,
+    transparent 100%);
+}
+.itv3-glow{
+  position:absolute;left:50%;transform:translateX(-50%);
+  top:0;width:5px;height:110px;
+  background:linear-gradient(to bottom,
+    transparent,
+    rgba(170,85,0,0.55) 20%,
+    rgba(170,85,0,0.90) 50%,
+    rgba(170,85,0,0.55) 80%,
+    transparent);
+  filter:blur(3px);border-radius:6px;
+  z-index:1;pointer-events:none;
+}
+.itv3-item{
+  position:relative;z-index:2;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;padding:30px 16px 4px;width:100%;
+}
+.itv3-gem{
+  width:9px;height:9px;
+  background:linear-gradient(135deg,#bb6531 30%,#560d00);
+  transform:rotate(45deg);border-radius:2px;
+  box-shadow:0 0 0 4px rgba(170,85,0,0.12),0 0 18px rgba(170,85,0,0.45);
+  margin-bottom:18px;flex-shrink:0;
+}
+.itv3-gem-teal{
+  background:linear-gradient(135deg,#1a8a8a 30%,#004d4d);
+  box-shadow:0 0 0 4px rgba(0,77,77,0.14),0 0 18px rgba(0,77,77,0.45);
+}
+.itv3-gem-mid{
+  background:linear-gradient(135deg,#bb6531 30%,#7a3a10);
+  box-shadow:0 0 0 4px rgba(170,85,0,0.10),0 0 18px rgba(170,85,0,0.38);
+}
+.itv3-time{
+  font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:500;
+  letter-spacing:8px;color:var(--dark);line-height:1;margin-bottom:6px;
+  text-indent:8px;
+}
+.itv3-ev{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:15px;color:rgba(58,20,0,0.6);
+  letter-spacing:3px;text-transform:uppercase;line-height:1.5;
+  text-indent:3px;font-weight:500;
+}
+.itv3-sub{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:13px;color:var(--gold);opacity:.75;
+  letter-spacing:1px;margin-top:4px;line-height:1.4;font-weight:500;
+}
+.itv3-item:last-child{padding-bottom:10px;}
+
+/* ── DRESS CODE ── */
+.dc-note{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;letter-spacing:3px;text-transform:uppercase;color:var(--dark);margin-bottom:8px;font-weight:500;}
+.dc-warn{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--gold);margin-bottom:26px;letter-spacing:1px;font-weight:500;}
+.dc-figures{display:flex;align-items:stretch;justify-content:center;gap:0;margin-top:6px;}
+.dc-fig{flex:1;display:flex;flex-direction:column;align-items:center;padding:18px 10px 14px;}
+.dc-divider{
+  width:1px;flex-shrink:0;margin:12px 0;
+  background:linear-gradient(to bottom,transparent,var(--gold) 18%,var(--gold) 82%,transparent);
+}
+.dc-svg{height:148px;width:auto;color:var(--dark);}
+.dc-fig-name{
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;
+  color:var(--dark);letter-spacing:3px;margin-top:16px;text-transform:uppercase;
+}
+.dc-fig-hint{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  color:var(--gold);letter-spacing:1.5px;margin-top:5px;text-align:center;line-height:1.55;font-weight:500;
+}
+#sdc{position:relative;overflow:hidden;}
+.dc-star-layer,.dc-glow-layer{position:absolute;inset:0;pointer-events:none;z-index:0;}
+.dc-glow-layer{
+  background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(170,85,0,0) 0%,transparent 100%);
+  animation:dcGlow 4.2s ease-in-out infinite;
+}
+@keyframes dcGlow{
+  0%,100%{background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(170,85,0,.0) 0%,transparent 100%);}
+  50%{background:radial-gradient(ellipse 80% 55% at 50% 50%,rgba(170,85,0,.11) 0%,rgba(187,101,49,.04) 60%,transparent 100%);}
+}
+.dc-sparkle{
+  position:absolute;pointer-events:none;will-change:transform,opacity;
+  color:var(--gold);filter:drop-shadow(0 0 5px rgba(187,101,49,.95));
+  user-select:none;line-height:1;
+}
+#sdc .eyebrow,#sdc .sec-title,#sdc .dc-note,#sdc .dc-warn,#sdc .dc-figures{position:relative;z-index:1;}
+@media(prefers-reduced-motion:reduce){.dc-glow-layer{animation:none;}}
+
+/* ── DC COLORS ── */
+.dc-colors{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;}
+.dc-swatch{width:36px;height:36px;border-radius:50%;border:2px solid rgba(170,85,0,.3);box-shadow:0 2px 8px rgba(0,0,0,.12);}
+.dc-avoid{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--dark);margin-top:16px;opacity:.7;font-weight:500;}
+.dc-avoid-colors{display:flex;gap:8px;justify-content:center;margin-top:8px;}
+.dc-avoid-swatch{width:28px;height:28px;border-radius:50%;border:2px solid rgba(170,85,0,.2);position:relative;overflow:hidden;}
+.dc-avoid-swatch::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(200,0,0,.6) 40%,rgba(200,0,0,.6) 60%,transparent 60%);}
+
+/* ── FAMILIA ── */
+.fam{display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center;}
+.fam-g .role{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500;}
+.fam-g .names{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--dark);line-height:1.7;font-weight:500;}
+.amp{font-style:italic;font-size:16px;color:var(--gold);}
+.flor{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--gold);opacity:.5;letter-spacing:10px;}
+
+/* ── FOTO PRINCIPAL ── */
+.foto-sec{padding:60px 26px 80px;text-align:center;}
+.foto-frame{
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(86,13,0,.18);
+  border:3px solid rgba(170,85,0,.25);
+  max-width:340px;margin:0 auto;
+}
+.foto-frame img{width:100%;height:auto;display:block;}
+
+/* ── MESA DE REGALOS ── */
+.gift-grid{display:flex;flex-direction:column;gap:16px;}
+.gift-card{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 6px 36px rgba(86,13,0,.1);display:flex;align-items:center;gap:18px;}
+.gift-logo-wrap{width:64px;height:64px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.gift-logo-wrap.bank{background:var(--dark);}
+.gift-body{flex:1;min-width:0;}
+.gift-body .gb-name{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--dark);font-weight:600;margin-bottom:2px;}
+.gift-body .gb-desc{font-family:'Lato',sans-serif;font-size:12px;letter-spacing:1px;color:var(--gold);text-transform:uppercase;font-weight:700;}
+.gift-body .gb-account{font-family:'Lato',sans-serif;font-size:14px;color:var(--text);margin-top:6px;letter-spacing:1px;font-weight:700;}
+.btn-copy{
+  display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:9px 18px;
+  background:var(--surface);color:var(--dark);border-radius:20px;
+  font-family:'Cormorant Garamond',serif;font-size:12px;
+  text-transform:uppercase;letter-spacing:2px;font-weight:600;
+  border:1px solid rgba(170,85,0,.35);cursor:pointer;
+  transition:background .25s,color .25s;
+}
+.btn-copy:hover{background:var(--gold);color:#fff;border-color:transparent;}
+
+/* ── MAP EMBED ── */
+.map-wrap{margin:16px 0 4px;border-radius:10px;overflow:hidden;line-height:0;box-shadow:0 4px 18px rgba(86,13,0,.12);}
+.map-wrap iframe{display:block;width:100%;height:200px;border:0;}
+
+/* ── ÁLBUM ── */
+.album-sub{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--text);letter-spacing:1px;margin-bottom:28px;line-height:1.7;padding:0 16px;font-weight:500;}
+
+/* ── RSVP ── */
+.rsvp-card{background:var(--card);border-radius:18px;padding:28px 22px;box-shadow:0 6px 36px rgba(86,13,0,.1);text-align:center;}
+.rsvp-msg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--text);line-height:1.7;margin-bottom:22px;font-weight:500;}
+.btn-wa{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;margin-top:0;padding:16px;min-height:52px;
+  background:var(--accent);color:#fff;border-radius:30px;
+  border:none;cursor:pointer;
+  font-family:'Cormorant Garamond',serif;font-size:13px;
+  text-transform:uppercase;letter-spacing:3px;font-weight:600;
+  transition:background .3s,transform .3s;
+}
+.btn-wa:hover{background:var(--dark);transform:translateY(-2px);}
+.rsvp-deadline{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--gold);margin-top:14px;opacity:.8;font-weight:500;}
+
+/* ── NO NIÑOS ── */
+.kids-notice{
+  text-align:center;margin-top:28px;padding:20px 18px;
+  background:rgba(170,85,0,.06);border-radius:14px;
+  border:1px solid rgba(170,85,0,.18);
+}
+.kids-notice p{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--dark);line-height:1.6;font-weight:500;}
+.kids-notice .kids-icon{font-size:28px;margin-bottom:8px;display:block;}
+
+/* ── FOOTER ── */
+footer{padding:50px 20px;text-align:center;}
+footer .fn{font-family:'Great Vibes',cursive;font-size:52px;color:var(--dark);}
+footer .fd{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-top:6px;font-weight:500;}
+footer .fc{font-family:'Lato',sans-serif;font-size:11px;letter-spacing:2px;color:var(--text);opacity:.38;margin-top:18px;}
+footer .fc a{color:inherit;text-decoration:none;}
+
+/* ── VINIL / MÚSICA ── */
+.vinyl-btn{
+  position:fixed;bottom:22px;right:22px;z-index:998;
+  width:72px;height:72px;border:none;background:transparent;
+  cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent;
+  filter:drop-shadow(0 6px 20px rgba(0,0,0,.65));
+}
+.vinyl-btn:focus-visible{outline:2px solid var(--gold);outline-offset:6px;border-radius:50%;}
+.vinyl-btn::before{
+  content:'';position:absolute;inset:-7px;border-radius:50%;
+  border:1.5px solid rgba(170,85,0,.55);
+  opacity:0;pointer-events:none;
+  transition:opacity .35s;
+}
+.vinyl-btn.is-playing::before{
+  opacity:1;
+  animation:vinyl-ring 2.4s ease-out infinite;
+}
+@keyframes vinyl-ring{
+  0%  {box-shadow:0 0 0 0   rgba(170,85,0,.45);}
+  65% {box-shadow:0 0 0 14px rgba(170,85,0,0);}
+  100%{box-shadow:0 0 0 0   rgba(170,85,0,0);}
+}
+.vinyl{
+  width:72px;height:72px;border-radius:50%;
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 30% 28%, rgba(255,255,255,.10) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%,
+      #12100C 0%,  #12100C 33%,
+      rgba(255,255,255,.07) 33.5%, #12100C 34%,
+      #12100C 37%, rgba(255,255,255,.04) 37.5%, #12100C 38%,
+      #12100C 41%, rgba(255,255,255,.06) 41.5%, #12100C 42%,
+      #12100C 45%, rgba(255,255,255,.04) 45.5%, #12100C 46%,
+      #12100C 49%, rgba(255,255,255,.05) 49.5%, #12100C 50%,
+      #12100C 53%, rgba(255,255,255,.04) 53.5%, #12100C 54%,
+      #12100C 57%, rgba(255,255,255,.06) 57.5%, #12100C 58%,
+      #12100C 61%, rgba(255,255,255,.04) 61.5%, #12100C 62%,
+      #12100C 65%, rgba(255,255,255,.05) 65.5%, #12100C 66%,
+      #12100C 69%, rgba(255,255,255,.04) 69.5%, #12100C 70%,
+      #12100C 73%, rgba(255,255,255,.06) 73.5%, #12100C 74%,
+      #12100C 78%, rgba(255,255,255,.04) 78.5%, #12100C 79%,
+      #12100C 83%, rgba(255,255,255,.05) 83.5%, #12100C 84%,
+      #12100C 88%, rgba(255,255,255,.04) 88.5%, #12100C 89%,
+      #12100C 93%, rgba(255,255,255,.06) 93.5%, #12100C 94%,
+      #12100C 100%
+    );
+  animation:vinyl-spin 3.8s linear infinite paused;
+}
+.vinyl.is-playing{animation-play-state:running;}
+@keyframes vinyl-spin{to{transform:rotate(360deg);}}
+.vinyl-label{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:27px;height:27px;border-radius:50%;
+  background:
+    radial-gradient(circle at 38% 35%, rgba(255,255,255,.22) 0%, transparent 55%),
+    conic-gradient(from 0deg,#7a3a10,#aa5500 18%,#bb6531 36%,#aa5500 54%,#7a3a10 72%,#aa5500 90%,#bb6531,#aa5500,#7a3a10);
+  box-shadow:0 0 0 1.5px rgba(170,85,0,.5), inset 0 1px 3px rgba(255,255,255,.2);
+  display:flex;align-items:center;justify-content:center;
+}
+.vinyl-hole{
+  width:7px;height:7px;border-radius:50%;
+  background:#0A0806;
+  box-shadow:inset 0 1px 2px rgba(0,0,0,.8);
+  flex-shrink:0;
+}
+
+/* ── ENVELOPE ── */
+#envelope-screen{
+  position:fixed;inset:0;z-index:10000;overflow:hidden;cursor:pointer;
+  opacity:0;background:#560d00;
+}
+#env-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:2;transform:scale(1.18);}
+#env-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:3;opacity:0;transform:scale(1.18);}
+#env-flash{position:fixed;inset:0;background:#fff;z-index:9999;opacity:0;pointer-events:none;}
+.envelope-hint{
+  position:absolute;bottom:52px;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:5px;text-transform:uppercase;
+  color:rgba(187,101,49,0.85);opacity:0;cursor:pointer;white-space:nowrap;z-index:10;font-weight:500;
+}
+.envelope-hint::after{
+  content:'';display:block;width:32px;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(170,85,0,0.7),transparent);
+  margin:10px auto 0;animation:hintPulse 2.2s ease-in-out infinite;
+}
+@keyframes hintPulse{0%,100%{opacity:.4;width:32px;}50%{opacity:1;width:54px;}}
+#loader{display:none;}
+</style>
+</head>
+<body>
+
+<!-- ENVELOPE -->
+<div id="envelope-screen" role="button" aria-label="Toca para abrir tu invitación">
+  <img id="env-image" src="./sobre.png" alt="Invitación Olivia y Carlos">
+  <video id="env-video" src="./sobre-apertura.mp4" playsinline webkit-playsinline muted preload="auto"></video>
+  <p class="envelope-hint" id="env-hint">Toca para abrir</p>
+</div>
+<div id="env-flash"></div>
+
+<!-- PARTÍCULAS -->
+<div id="stars"></div>
+
+<div class="wrap" style="visibility:hidden">
+
+  <!-- HERO -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-bg"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-bottom">
+      <div class="hero-eyebrow" id="hEb">Sábado · 17 de Octubre · 2026</div>
+      <h1 class="hero-names" id="hNm">
+        Olivia Isabel
+        <span class="hero-amp">&amp;</span>
+        Carlos Manuel
+      </h1>
+      <div class="hero-badge" id="hBd">
+        <span>García · Nuevo León</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- FECHA -->
+  <div class="fecha-sec rv">
+    <div class="fecha-line">
+      <div class="fl-bar"></div>
+      <div class="fecha-txt">17 · Octubre · 2026</div>
+      <div class="fl-bar right"></div>
+    </div>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <section id="scd" class="rv">
+    <div class="eyebrow">¡Ya Falta Poco!</div>
+    <h2 class="sec-title">Cuenta Regresiva</h2>
+    <div class="cd-row">
+      <div class="cd-box"><div class="cd-num" id="cdD">000</div><div class="cd-lbl">Días</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdH">00</div><div class="cd-lbl">Horas</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdM">00</div><div class="cd-lbl">Mins</div></div>
+      <div class="cd-box"><div class="cd-num" id="cdS">00</div><div class="cd-lbl">Segs</div></div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- UBICACIÓN — Solo Recepción -->
+  <section id="subic">
+    <h2 class="sec-title rv">Ubicación</h2>
+    <div class="loc-card rv" id="lc1">
+      <div class="lt">Recepción</div>
+      <div class="ls">Celebración</div>
+      <div class="lh">7:00 pm</div>
+      <a class="btn" href="https://maps.app.goo.gl/zUBBmQ1BPcAEhcKw9?g_st=ic" target="_blank" rel="noopener">Cómo Llegar</a>
+    </div>
+  </section>
+
+  <!-- CALENDAR -->
+  <section class="rv cal-c" id="scal">
+    <div class="eyebrow">No lo Olvides</div>
+    <h2 class="sec-title">Guárdalo</h2>
+    <p>Agrega el evento a tu calendario</p>
+    <a class="btn" id="gcalBtn" href="#" target="_blank" rel="noopener">Añadir a Google Calendar</a>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- ITINERARIO -->
+  <section id="siti">
+    <div class="eyebrow rv">El Gran Día</div>
+    <h2 class="sec-title rv">Itinerario</h2>
+    <div class="itv3">
+      <div class="itv3-track"></div>
+      <div class="itv3-glow" id="itvGlow"></div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem"></div>
+        <div class="itv3-time">7:00</div>
+        <div class="itv3-ev">Civil</div>
+        <div class="itv3-sub">En recepción</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem itv3-gem-teal"></div>
+        <div class="itv3-time">7:30</div>
+        <div class="itv3-ev">Fotografías Familiares</div>
+      </div>
+
+      <div class="itv3-item rv">
+        <div class="itv3-gem itv3-gem-mid"></div>
+        <div class="itv3-time">8:15</div>
+        <div class="itv3-ev">Fiesta</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- DRESS CODE -->
+  <section class="rv" id="sdc">
+    <div class="eyebrow">Etiqueta</div>
+    <h2 class="sec-title">Dress Code</h2>
+    <div class="dc-note">Formal</div>
+    <div class="dc-warn">✦ &nbsp; Reservar el blanco para la novia &nbsp; ✦</div>
+    <div class="dc-figures" id="dcFigs">
+
+      <!-- Caballero -->
+      <div class="dc-fig">
+        <svg class="dc-svg" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+          <circle cx="50" cy="30" r="14"/>
+          <rect x="45" y="43" width="10" height="8" rx="2"/>
+          <path d="M18 55 Q25 48 40 50 L42 122 L58 122 L60 50 Q75 48 82 55 L83 136 L17 136 Z"/>
+          <path d="M40 50 L36 80 L50 74 L64 80 L60 50 L50 54 Z" fill="var(--bg)" opacity=".22"/>
+          <polygon points="48,52 46,78 50,74 54,78 52,52" fill="#aa5500" opacity=".55"/>
+          <rect x="19" y="134" width="62" height="5" rx="2"/>
+          <rect x="44" y="132" width="12" height="9" rx="2" fill="#aa5500" opacity=".6"/>
+          <path d="M19 138 L26 194 L47 191 L50 170 L53 191 L74 194 L81 138 Z"/>
+          <path d="M26 192 L18 200 L46 200 L47 192 Z"/>
+          <path d="M74 192 L53 192 L54 200 L82 200 Z"/>
+        </svg>
+        <div class="dc-fig-name">Caballero</div>
+        <div class="dc-fig-hint">Traje Formal</div>
+      </div>
+
+      <div class="dc-divider" aria-hidden="true"></div>
+
+      <!-- Dama -->
+      <div class="dc-fig">
+        <svg class="dc-svg" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
+          <ellipse cx="50" cy="11" rx="13" ry="9"/>
+          <circle cx="50" cy="30" r="14"/>
+          <rect x="46" y="43" width="8" height="8" rx="2"/>
+          <path d="M32 52 Q20 63 18 80" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M68 52 Q80 63 82 80" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
+          <path d="M32 48 Q37 44 46 47 L47 80 L53 80 L54 47 Q63 44 68 48 L70 84 L30 84 Z"/>
+          <rect x="30" y="82" width="40" height="7" rx="3" fill="#aa5500" opacity=".65"/>
+          <path d="M30 88 Q16 118 4 200 L96 200 Q84 118 70 88 Z"/>
+          <path d="M38 89 Q26 130 16 200" stroke="rgba(170,85,0,.28)" stroke-width="1.5" fill="none"/>
+          <path d="M50 89 L50 200"          stroke="rgba(170,85,0,.22)" stroke-width="1.5" fill="none"/>
+          <path d="M62 89 Q74 130 84 200"  stroke="rgba(170,85,0,.28)" stroke-width="1.5" fill="none"/>
+        </svg>
+        <div class="dc-fig-name">Dama</div>
+        <div class="dc-fig-hint">Vestido Formal<br>Estilo Elegante</div>
+      </div>
+
+    </div>
+
+    <!-- Colores sugeridos -->
+    <div style="text-align:center;margin-top:24px;position:relative;z-index:1;">
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--dark);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:500;">Colores sugeridos</p>
+      <div class="dc-colors">
+        <div class="dc-swatch" style="background:#004d4d;" title="Teal"></div>
+        <div class="dc-swatch" style="background:#aa5500;" title="Ámbar"></div>
+        <div class="dc-swatch" style="background:#560d00;" title="Vino oscuro"></div>
+        <div class="dc-swatch" style="background:#000000;" title="Negro"></div>
+      </div>
+      <div class="dc-avoid">Evitar los siguientes colores</div>
+      <div class="dc-avoid-colors">
+        <div class="dc-avoid-swatch" style="background:#FFFFFF;" title="Blanco"></div>
+        <div class="dc-avoid-swatch" style="background:#001c4b;" title="Azul marino"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- FAMILIA -->
+  <section id="sfam">
+    <div class="eyebrow rv">Con la Bendición de</div>
+    <h2 class="sec-title rv">Nuestra Familia</h2>
+    <div class="fam">
+      <div class="fam-g rv">
+        <div class="role">Padres de la Novia</div>
+        <div class="names">Carlos Orozco<br><span class="amp">&amp;</span><br>Virginia Moncada</div>
+      </div>
+      <div class="flor rv">✦ &nbsp; ✦ &nbsp; ✦</div>
+      <div class="fam-g rv">
+        <div class="role">Padres del Novio</div>
+        <div class="names">Juan Cortes<br><span class="amp">&amp;</span><br>Karina López</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO -->
+  <section class="foto-sec">
+    <div class="eyebrow rv">Nuestro Momento</div>
+    <h2 class="sec-title rv">Nosotros</h2>
+    <div class="foto-frame rv">
+      <img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/1cb747ab-5a30-41f2-9d1a-8d0516ca10ad/1780330472644-5.jpeg" alt="Olivia Isabel y Carlos Manuel" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- MESA DE REGALOS -->
+  <section class="rv" id="sgifts">
+    <div class="eyebrow">Con Cariño</div>
+    <h2 class="sec-title">Mesa de Regalos</h2>
+    <div class="gift-grid">
+      <div class="gift-card rv">
+        <div class="gift-logo-wrap bank">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff"><path d="M11.5 2L2 7v2h20V7L11.5 2zm-7 9v8H7v-8H4.5zm4.5 0v8h2v-8H9zm4 0v8h2v-8h-2zm4.5 0v8H19v-8h-1.5zM2 21v2h20v-2H2z"/></svg>
+        </div>
+        <div class="gift-body">
+          <div class="gb-name">Transferencia</div>
+          <div class="gb-desc">CLABE · Afirme · Olivia Orozco</div>
+          <div class="gb-account" id="accountNum">0625 8000 8472 885902</div>
+          <button class="btn-copy" id="copyBtn" onclick="copyAccount()">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            Copiar CLABE
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- ÁLBUM DE FOTOS -->
+  <section class="rv" id="salbum">
+    <div class="eyebrow">Comparte tus Momentos</div>
+    <h2 class="sec-title">Álbum de Fotos</h2>
+    <p class="album-sub">Escanea el código y sube tus fotos favoritas<br>de esta celebración especial</p>
+    <div style="display:flex;justify-content:center;margin-bottom:22px;">
+      <div style="padding:18px;border-radius:20px;background:var(--card);box-shadow:0 6px 36px rgba(86,13,0,.1);border:1.5px solid rgba(170,85,0,.28);">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&color=004d4d&bgcolor=efdfc7&data=https://www.instagram.com/explore/tags/OliviaYCarlos" alt="QR Álbum de fotos" width="180" height="180" loading="lazy" style="display:block;border-radius:10px;">
+      </div>
+    </div>
+    <div style="text-align:center;font-family:'Great Vibes',cursive;font-size:40px;color:var(--gold);filter:drop-shadow(0 0 10px rgba(170,85,0,.4));margin-top:4px;">#OliviaYCarlos</div>
+  </section>
+
+  <!-- ORNAMENTO -->
+  <div class="orn rv">
+    <svg viewBox="0 0 170 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 19 Q44 7 85 19 T164 19" stroke="#aa5500" stroke-width=".85" opacity=".5"/>
+      <path d="M6 21 Q44 33 85 21 T164 21" stroke="#aa5500" stroke-width=".5" opacity=".22"/>
+      <polygon points="85,4 88.1,13.8 98.5,13.8 90.2,19.6 93.3,29.4 85,23.6 76.7,29.4 79.8,19.6 71.5,13.8 81.9,13.8" fill="#aa5500" opacity=".75"/>
+      <polygon points="32,10 33.2,14 37.5,14 34,16.8 35.2,20.8 32,18 28.8,20.8 30,16.8 26.5,14 30.8,14" fill="#aa5500" opacity=".38"/>
+      <polygon points="138,10 139.2,14 143.5,14 140,16.8 141.2,20.8 138,18 134.8,20.8 136,16.8 132.5,14 136.8,14" fill="#aa5500" opacity=".38"/>
+    </svg>
+  </div>
+
+  <!-- RSVP -->
+  <section class="rv" id="srsvp">
+    <div class="eyebrow">Confirma tu Asistencia</div>
+    <h2 class="sec-title">R.S.V.P.</h2>
+    <div class="rsvp-card" id="rsvp-card">
+      <p class="rsvp-msg">Nos encantaría contar con tu presencia en este día tan especial para nosotros.</p>
+      <button class="btn-wa" id="rsvpBtn" aria-label="Confirmar asistencia por WhatsApp" onclick="confirmarWA()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Confirmar Asistencia
+      </button>
+      <p class="rsvp-deadline">Fecha límite: 17 de septiembre de 2026</p>
+    </div>
+
+    <!-- NO NIÑOS -->
+    <div class="kids-notice rv">
+      <span class="kids-icon">👠</span>
+      <p>Evento exclusivamente para adultos.<br>Agradecemos tu comprensión.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fn">Olivia Isabel &amp; Carlos Manuel</div>
+    <div class="fd">17 · Octubre · 2026 · García, N.L.</div>
+    <div class="fc">Invitación creada por <a href="https://www.instagram.com/elysium.invitaciones" target="_blank" rel="noopener">@elysium.invitaciones</a></div>
+  </footer>
+
+</div>
+
+<!-- MÚSICA / VINIL -->
+<button class="vinyl-btn" id="musicFab" aria-label="Reproducir música">
+  <div class="vinyl" id="vinylDisc">
+    <div class="vinyl-label">
+      <div class="vinyl-hole"></div>
+    </div>
+  </div>
+</button>
+<audio id="bgAudio" preload="none" loop>
+  <source src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/boda-olivia-y-carlos/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.scrollTo(0,0);
+history.scrollRestoration='manual';
+gsap.registerPlugin(ScrollTrigger);
+
+/* ══════════════════════════════════════
+   RSVP — WhatsApp directo
+══════════════════════════════════════ */
+var WA_NUMERO = ''; // pendiente
+function confirmarWA(){
+  var msg = encodeURIComponent(
+    '¡Hola! Con mucho gusto confirmo mi asistencia a la celebración de Olivia Isabel y Carlos Manuel. 🎉\n¡Nos vemos pronto! 💫'
+  );
+  window.open('https://wa.me/' + WA_NUMERO + '?text=' + msg, '_blank');
+}
+
+/* ══════════════════════════════════════
+   ENVELOPE ANIMATION
+══════════════════════════════════════ */
+(function(){
+  var envScreen = document.getElementById('envelope-screen');
+  var envImage  = document.getElementById('env-image');
+  var envVideo  = document.getElementById('env-video');
+  var envFlash  = document.getElementById('env-flash');
+  var hint      = document.getElementById('env-hint');
+  var opened    = false;
+
+  gsap.timeline()
+    .to(envScreen, {opacity:1, duration:1.2, ease:'power2.out', delay:0.3})
+    .to(hint,      {opacity:1, duration:0.9, ease:'power2.out'}, '-=0.5');
+
+  gsap.to(hint, {scale:1.07, duration:1.6, ease:'sine.inOut', repeat:-1, yoyo:true, delay:2});
+
+  var flashStarted = false;
+  var invitationReady = false;
+
+  function prepareInvitation(){
+    if(invitationReady) return;
+    invitationReady = true;
+    envScreen.style.display = 'none';
+    document.querySelector('.wrap').style.visibility = 'visible';
+    launchPage();
+  }
+
+  function revealInvitation(){
+    prepareInvitation();
+    audio.play().catch(function(){});
+    playing = true;
+    vinylDisc.classList.add('is-playing');
+    fab.classList.add('is-playing');
+    fab.setAttribute('aria-label','Pausar música');
+    gsap.to(envFlash, {opacity:0, duration:1.2, ease:'power2.out',
+      onComplete(){ envFlash.style.display='none'; }});
+  }
+
+  envVideo.addEventListener('timeupdate', function(){
+    if(!flashStarted && envVideo.duration && envVideo.currentTime >= envVideo.duration - 2){
+      flashStarted = true;
+      gsap.to(envFlash, {opacity:1, duration:1, ease:'power2.in', onComplete: revealInvitation});
+    }
+  });
+
+  envVideo.addEventListener('ended', function(){
+    gsap.set(envFlash, {opacity:1});
+    revealInvitation();
+  });
+
+  function openEnvelope(){
+    if(opened) return;
+    opened = true;
+    gsap.killTweensOf([envImage, hint]);
+    gsap.to(hint, {opacity:0, duration:0.2});
+    var p = envVideo.play();
+    gsap.to(envImage, {opacity:0, duration:0.55, ease:'power2.inOut',
+      onComplete(){ envImage.style.display='none'; }});
+    gsap.to(envVideo, {opacity:1, duration:0.55, ease:'power2.inOut'});
+    if(p !== undefined) p.catch(function(){ revealInvitation(); });
+  }
+
+  envScreen.addEventListener('click', openEnvelope);
+  envScreen.addEventListener('touchstart', function(e){ e.preventDefault(); openEnvelope(); }, {passive:false});
+}());
+
+/* ══════════════════════════════════════
+   HERO ENTRANCE
+══════════════════════════════════════ */
+function launchPage(){
+  var tl = gsap.timeline({defaults:{ease:'power2.out'}});
+  tl.to('#hEb', {opacity:1, duration:1.2, delay:0.3})
+    .to('#hNm', {opacity:1, y:0, duration:1.8, ease:'power3.out'}, '-=0.8')
+    .to('#hBd', {opacity:1, y:0, duration:1.2}, '-=1');
+  initStars();
+  initScrollReveal();
+  initItinerary();
+  initDressCode();
+}
+
+/* ══════════════════════════════════════
+   PARTÍCULAS
+══════════════════════════════════════ */
+function initStars(){
+  var layer = document.getElementById('stars');
+  var colors = ['#aa5500','#bb6531','#9e8561','#cdb28b','#812108'];
+  for(var i=0; i<24; i++){
+    var s = document.createElement('div');
+    s.className = 'star';
+    var sz = 5 + Math.random() * 7;
+    s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;background:'+colors[i%colors.length]+';left:'+Math.random()*100+'%;';
+    layer.appendChild(s);
+    animStar(s);
+  }
+}
+function animStar(s){
+  var h = window.innerHeight;
+  gsap.set(s, {y:-20, x:0, opacity:0, rotation:Math.random()*360});
+  gsap.timeline({delay:Math.random()*18})
+    .to(s, {opacity:0.5, duration:2.5, ease:'none'})
+    .to(s, {y:h+40, x:(Math.random()*100)-50, rotation:'+='+(180+Math.random()*280),
+        duration:22+Math.random()*20, ease:'none',
+        onComplete(){ gsap.set(s,{left:Math.random()*100+'%',x:0}); animStar(s); }
+    }, '<');
+}
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════════ */
+function initScrollReveal(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    gsap.fromTo(el,
+      {y:36, opacity:0},
+      {y:0, opacity:1, duration:1.3, ease:'power2.out',
+       scrollTrigger:{trigger:el, start:'top 88%'}});
+  });
+}
+
+/* ══════════════════════════════════════
+   ITINERARIO V3
+══════════════════════════════════════ */
+function initItinerary(){
+  var glow = document.getElementById('itvGlow');
+  var section = document.getElementById('siti');
+  var items = document.querySelectorAll('.itv3-item');
+  if(!glow || !section) return;
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top 58%',
+    end: 'bottom 42%',
+    scrub: 1.8,
+    onUpdate: function(self){
+      var track = section.querySelector('.itv3-track');
+      if(!track) return;
+      var h = track.offsetHeight - 55;
+      glow.style.top = (self.progress * h) + 'px';
+    }
+  });
+
+  items.forEach(function(item){
+    var gem    = item.querySelector('.itv3-gem');
+    var isTeal = gem.classList.contains('itv3-gem-teal');
+    var gc     = isTeal ? '0,150,150' : '187,101,49';
+
+    gsap.fromTo(gem,
+      {scale:0, opacity:0},
+      {scale:1, opacity:1, duration:0.6, ease:'back.out(2.8)',
+       scrollTrigger:{trigger:item, start:'top 86%', once:true},
+       onComplete:function(){
+         gsap.timeline()
+           .to(gem,{scale:1.4, filter:'drop-shadow(0 0 20px rgba('+gc+',1))',   duration:0.3, ease:'power2.out'})
+           .to(gem,{scale:1,   filter:'drop-shadow(0 0 5px rgba('+gc+',0.35))', duration:0.28,ease:'power2.in'})
+           .to(gem,{scale:1.2, filter:'drop-shadow(0 0 14px rgba('+gc+',0.8))', duration:0.22,ease:'power2.out'})
+           .to(gem,{scale:1,   filter:'drop-shadow(0 0 4px rgba('+gc+',0.25))', duration:0.32,ease:'power2.in'});
+       }
+      });
+
+    var els = [item.querySelector('.itv3-time'), item.querySelector('.itv3-ev'), item.querySelector('.itv3-sub')].filter(Boolean);
+    gsap.fromTo(els,
+      {y:14, opacity:0},
+      {y:0, opacity:1, duration:0.8, ease:'power2.out', stagger:0.08,
+       scrollTrigger:{trigger:item, start:'top 86%', once:true}});
+  });
+}
+
+/* ══════════════════════════════════════
+   DRESS CODE
+══════════════════════════════════════ */
+function initDressCode(){
+  var sdc = document.getElementById('sdc');
+
+  var glowLayer = document.createElement('div');
+  glowLayer.className = 'dc-glow-layer';
+  sdc.insertBefore(glowLayer, sdc.firstChild);
+
+  var starLayer = document.createElement('div');
+  starLayer.className = 'dc-star-layer';
+  sdc.insertBefore(starLayer, sdc.firstChild);
+
+  var syms = ['✦','✧','⋆','✶','·','✹'];
+  var starTimer = null;
+
+  function spawnStar(){
+    var el = document.createElement('span');
+    el.className = 'dc-sparkle';
+    el.textContent = syms[Math.floor(Math.random()*syms.length)];
+    var x = 3 + Math.random()*94;
+    var sz = 10 + Math.random()*18;
+    el.style.cssText = 'left:'+x+'%;bottom:-12px;font-size:'+sz+'px;';
+    starLayer.appendChild(el);
+    var flyY = -(70 + Math.random()*220);
+    var rot  = Math.random()*200 - 100;
+    gsap.fromTo(el,
+      {opacity:0, y:0, rotation:Math.random()*40-20, scale:.25},
+      {opacity:.95, y:flyY*0.45, rotation:rot*0.5, scale:1,
+       duration:1.6+Math.random()*.9, ease:'power1.out',
+       onComplete:function(){
+         gsap.to(el,{opacity:0, y:flyY, duration:1.1, ease:'power2.in',
+           onComplete:function(){ if(el.parentNode) el.parentNode.removeChild(el); }});
+       }});
+  }
+
+  var entered = false;
+  ScrollTrigger.create({
+    trigger:'#sdc', start:'top 80%', end:'bottom top',
+    onEnter:function(){
+      if(!entered){ entered=true;
+        gsap.fromTo('.dc-fig',{opacity:0,y:28},{opacity:1,y:0,duration:1,stagger:.22,ease:'power2.out'});
+        gsap.fromTo('.dc-divider',{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:1.2,ease:'power2.out',delay:.15});
+        gsap.to('.dc-svg',{filter:'drop-shadow(0 0 12px rgba(170,85,0,.55))',duration:1.6,ease:'power2.out',delay:.5,yoyo:true,repeat:-1,repeatDelay:1.6});
+      }
+      if(!starTimer) starTimer = setInterval(spawnStar, 320);
+    },
+    onLeave:function(){ clearInterval(starTimer); starTimer=null; },
+    onEnterBack:function(){ if(!starTimer) starTimer=setInterval(spawnStar,320); },
+    onLeaveBack:function(){ clearInterval(starTimer); starTimer=null; }
+  });
+}
+
+/* ══════════════════════════════════════
+   COUNTDOWN — 17 Oct 2026, 19:00 (CST UTC-6)
+══════════════════════════════════════ */
+(function(){
+  var target = new Date('2026-10-18T01:00:00Z').getTime();
+  function tick(){
+    var d = target - Date.now();
+    if(d <= 0){
+      ['cdD','cdH','cdM','cdS'].forEach(function(id){ document.getElementById(id).textContent='00'; });
+      return;
+    }
+    document.getElementById('cdD').textContent = String(Math.floor(d/86400000)).padStart(3,'0');
+    document.getElementById('cdH').textContent = String(Math.floor(d%86400000/3600000)).padStart(2,'0');
+    document.getElementById('cdM').textContent = String(Math.floor(d%3600000/60000)).padStart(2,'0');
+    document.getElementById('cdS').textContent = String(Math.floor(d%60000/1000)).padStart(2,'0');
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ══════════════════════════════════════
+   GOOGLE CALENDAR
+══════════════════════════════════════ */
+(function(){
+  var t = encodeURIComponent('Boda de Olivia Isabel & Carlos Manuel');
+  var d = encodeURIComponent('Recepción y Celebración: 7:00 pm — García, Nuevo León');
+  var l = encodeURIComponent('García, Nuevo León, México');
+  document.getElementById('gcalBtn').href =
+    'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+t+'&dates=20261018T010000Z/20261018T080000Z&details='+d+'&location='+l;
+})();
+
+/* ══════════════════════════════════════
+   COPIAR CLABE
+══════════════════════════════════════ */
+function copyAccount(){
+  var num = document.getElementById('accountNum').textContent;
+  var clean = num.replace(/\s/g,'');
+  var btn = document.getElementById('copyBtn');
+  var orig = btn.innerHTML;
+  function confirm(){
+    btn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg> ¡Copiado!';
+    btn.style.background = 'var(--gold)';
+    btn.style.color = '#fff';
+    setTimeout(function(){ btn.innerHTML=orig; btn.style.background=''; btn.style.color=''; }, 2500);
+  }
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(clean).then(confirm).catch(function(){
+      var el=document.createElement('textarea'); el.value=clean;
+      document.body.appendChild(el); el.select(); document.execCommand('copy'); el.remove(); confirm();
+    });
+  } else {
+    var el=document.createElement('textarea'); el.value=clean;
+    document.body.appendChild(el); el.select(); document.execCommand('copy'); el.remove(); confirm();
+  }
+}
+
+/* ══════════════════════════════════════
+   MÚSICA
+══════════════════════════════════════ */
+var fab        = document.getElementById('musicFab');
+var vinylDisc  = document.getElementById('vinylDisc');
+var audio      = document.getElementById('bgAudio');
+var playing    = false;
+fab.addEventListener('click', function(){
+  playing = !playing;
+  if(playing){
+    audio.play().catch(function(){});
+    vinylDisc.classList.add('is-playing');
+    fab.classList.add('is-playing');
+    fab.setAttribute('aria-label','Pausar música');
+  } else {
+    audio.pause();
+    vinylDisc.classList.remove('is-playing');
+    fab.classList.remove('is-playing');
+    fab.setAttribute('aria-label','Reproducir música');
+  }
+});
+</script>
+</body>
+</html>
