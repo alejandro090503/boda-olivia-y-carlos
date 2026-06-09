@@ -236,7 +236,7 @@ section{padding:60px 26px;}
   width:1px;flex-shrink:0;margin:12px 0;
   background:linear-gradient(to bottom,transparent,var(--gold) 18%,var(--gold) 82%,transparent);
 }
-.dc-svg{height:148px;width:auto;color:var(--dark);}
+.dc-img{height:180px;width:auto;border-radius:12px;object-fit:contain;}
 .dc-fig-name{
   font-family:'Cormorant Garamond',serif;font-weight:600;font-size:17px;
   color:var(--dark);letter-spacing:3px;margin-top:16px;text-transform:uppercase;
@@ -266,10 +266,10 @@ section{padding:60px 26px;}
 /* ── DC COLORS ── */
 .dc-colors{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;}
 .dc-swatch{width:36px;height:36px;border-radius:50%;border:2px solid rgba(170,85,0,.3);box-shadow:0 2px 8px rgba(0,0,0,.12);}
-.dc-avoid{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--dark);margin-top:16px;opacity:.7;font-weight:500;}
-.dc-avoid-colors{display:flex;gap:8px;justify-content:center;margin-top:8px;}
-.dc-avoid-swatch{width:28px;height:28px;border-radius:50%;border:2px solid rgba(170,85,0,.2);position:relative;overflow:hidden;}
-.dc-avoid-swatch::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(200,0,0,.6) 40%,rgba(200,0,0,.6) 60%,transparent 60%);}
+.dc-avoid{text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--dark);margin-top:16px;opacity:.7;font-weight:500;}
+.dc-avoid-colors{display:flex;gap:24px;justify-content:center;margin-top:10px;}
+.dc-avoid-item{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.dc-color-name{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--dark);font-weight:500;letter-spacing:1px;}
 
 /* ── FAMILIA ── */
 .fam{display:flex;flex-direction:column;gap:28px;align-items:center;text-align:center;}
@@ -591,18 +591,7 @@ footer .fc a{color:inherit;text-decoration:none;}
 
       <!-- Caballero -->
       <div class="dc-fig">
-        <svg class="dc-svg" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
-          <circle cx="50" cy="30" r="14"/>
-          <rect x="45" y="43" width="10" height="8" rx="2"/>
-          <path d="M18 55 Q25 48 40 50 L42 122 L58 122 L60 50 Q75 48 82 55 L83 136 L17 136 Z"/>
-          <path d="M40 50 L36 80 L50 74 L64 80 L60 50 L50 54 Z" fill="var(--bg)" opacity=".22"/>
-          <polygon points="48,52 46,78 50,74 54,78 52,52" fill="#aa5500" opacity=".55"/>
-          <rect x="19" y="134" width="62" height="5" rx="2"/>
-          <rect x="44" y="132" width="12" height="9" rx="2" fill="#aa5500" opacity=".6"/>
-          <path d="M19 138 L26 194 L47 191 L50 170 L53 191 L74 194 L81 138 Z"/>
-          <path d="M26 192 L18 200 L46 200 L47 192 Z"/>
-          <path d="M74 192 L53 192 L54 200 L82 200 Z"/>
-        </svg>
+        <img class="dc-img" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/boda-olivia-y-carlos/caballero.webp" alt="Caballero formal" loading="lazy">
         <div class="dc-fig-name">Caballero</div>
         <div class="dc-fig-hint">Traje Formal</div>
       </div>
@@ -611,19 +600,7 @@ footer .fc a{color:inherit;text-decoration:none;}
 
       <!-- Dama -->
       <div class="dc-fig">
-        <svg class="dc-svg" viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true">
-          <ellipse cx="50" cy="11" rx="13" ry="9"/>
-          <circle cx="50" cy="30" r="14"/>
-          <rect x="46" y="43" width="8" height="8" rx="2"/>
-          <path d="M32 52 Q20 63 18 80" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
-          <path d="M68 52 Q80 63 82 80" stroke="currentColor" stroke-width="10" stroke-linecap="round" fill="none"/>
-          <path d="M32 48 Q37 44 46 47 L47 80 L53 80 L54 47 Q63 44 68 48 L70 84 L30 84 Z"/>
-          <rect x="30" y="82" width="40" height="7" rx="3" fill="#aa5500" opacity=".65"/>
-          <path d="M30 88 Q16 118 4 200 L96 200 Q84 118 70 88 Z"/>
-          <path d="M38 89 Q26 130 16 200" stroke="rgba(170,85,0,.28)" stroke-width="1.5" fill="none"/>
-          <path d="M50 89 L50 200"          stroke="rgba(170,85,0,.22)" stroke-width="1.5" fill="none"/>
-          <path d="M62 89 Q74 130 84 200"  stroke="rgba(170,85,0,.28)" stroke-width="1.5" fill="none"/>
-        </svg>
+        <img class="dc-img" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/boda-olivia-y-carlos/dama.webp" alt="Dama formal" loading="lazy">
         <div class="dc-fig-name">Dama</div>
         <div class="dc-fig-hint">Vestido Formal<br>Estilo Elegante</div>
       </div>
@@ -641,8 +618,14 @@ footer .fc a{color:inherit;text-decoration:none;}
       </div>
       <div class="dc-avoid">Evitar los siguientes colores</div>
       <div class="dc-avoid-colors">
-        <div class="dc-avoid-swatch" style="background:#FFFFFF;" title="Blanco"></div>
-        <div class="dc-avoid-swatch" style="background:#001c4b;" title="Azul marino"></div>
+        <div class="dc-avoid-item">
+          <div class="dc-swatch" style="background:#FFFFFF;border:2px solid #ccc;"></div>
+          <span class="dc-color-name">Blanco</span>
+        </div>
+        <div class="dc-avoid-item">
+          <div class="dc-swatch" style="background:#001c4b;"></div>
+          <span class="dc-color-name">Azul Marino</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1020,7 +1003,7 @@ function initDressCode(){
       if(!entered){ entered=true;
         gsap.fromTo('.dc-fig',{opacity:0,y:28},{opacity:1,y:0,duration:1,stagger:.22,ease:'power2.out'});
         gsap.fromTo('.dc-divider',{scaleY:0,opacity:0},{scaleY:1,opacity:1,duration:1.2,ease:'power2.out',delay:.15});
-        gsap.to('.dc-svg',{filter:'drop-shadow(0 0 12px rgba(170,85,0,.55))',duration:1.6,ease:'power2.out',delay:.5,yoyo:true,repeat:-1,repeatDelay:1.6});
+        gsap.to('.dc-img',{filter:'drop-shadow(0 0 12px rgba(170,85,0,.55))',duration:1.6,ease:'power2.out',delay:.5,yoyo:true,repeat:-1,repeatDelay:1.6});
       }
       if(!starTimer) starTimer = setInterval(spawnStar, 320);
     },
