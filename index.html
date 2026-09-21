@@ -815,7 +815,7 @@ footer .fc a{color:inherit;text-decoration:none;}
 
       <p id="rsvp-feedback"></p>
 
-      <p class="rsvp-deadline">Fecha límite: 17 de septiembre de 2026</p>
+      <p class="rsvp-deadline">Fecha límite: 10 de octubre de 2026</p>
     </div>
 
     <!-- NO NIÑOS -->
@@ -857,7 +857,7 @@ gsap.registerPlugin(ScrollTrigger);
 (function(){
   var PANEL_API = 'https://panel-invitados.vercel.app/api/confirmar';
   var RSVP_URL  = 'https://boda-olivia-y-carlos.vercel.app';
-  var DEADLINE  = new Date(2026, 8, 17, 23, 59, 59, 999);
+  var DEADLINE  = new Date(2026, 9, 10, 23, 59, 59, 999);
   var frozen    = Date.now() > DEADLINE.getTime();
   var params    = new URLSearchParams(location.search);
   var urlPara   = (params.get('para') || '').trim();
